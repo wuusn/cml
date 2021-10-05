@@ -1,7 +1,5 @@
 name: checkbot
-on:
-  issue_comment:
-    types: [created]
+on: push
 jobs:
   # check that CML container builds properly
   build-container:
