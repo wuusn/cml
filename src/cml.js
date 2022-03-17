@@ -29,7 +29,7 @@ const gitRemoteUrl = (opts = {}) => {
   const url = execSync(`git config --get remote.${remote}.url`).toString(
     'utf8'
   );
-  return stripAuth(gitUrlParse(url).toString('https'));
+  return stripAuth(gitUrlParse(url).toString('http'));
 };
 
 const inferToken = () => {
